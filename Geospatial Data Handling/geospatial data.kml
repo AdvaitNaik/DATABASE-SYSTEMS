@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+
+<Folder><name>geospatial data</name>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+    <Folder><name>schools</name>
+
+        <Folder><name>Dornsife College of Letters, Arts and Sciences</name>
+            <Folder><name>ALI</name> 
+                <Placemark><name>ALI</name>    
+                <description>American Language Institute, Dornsife College of Letters, Arts and Sciences</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2815546,34.0217325</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>MATH</name> 
+                <Placemark><name>MATH</name>
+                <description>Mathematics, Dornsife College of Letters, Arts and Sciences</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2909157,34.0222688</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+
+        <Folder><name>Viterbi School of Engineering</name>
+            <Folder><name>EE</name> 
+                <Placemark><name>EE</name>
+                <description>Electrical and Computer Engineering Department, Viterbi School of Engineering</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.290011321117,34.0199038710378</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>PTE</name> 
+                <Placemark><name>PTE</name>
+                <description>Petroleum Engineering, Viterbi School of Engineering</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.289119815964,34.0200935106597</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+
+        <Folder><name>Annenberg School for Communication and Journalism</name>
+            <Folder><name>ASCJ</name> 
+                <Placemark><name>ASCJ</name>
+                <description>Communication and Journalism, Annenberg School for Communication and Journalism</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2869759,34.0210143</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>PUBD</name> 
+                <Placemark><name>PUBD</name>
+                <description>Public Diplomacy, Annenberg School for Communication and Journalism</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2864371,34.0221025</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+
+        <Folder><name>Price School of Public Policy</name>
+            <Folder><name>HMGT</name> 
+                <Placemark><name>HMGT</name>
+                <description>Health Care Management, Price School of Public Policy</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2832474,34.0194327</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>AEST</name> 
+                <Placemark><name>AEST</name>
+                <description>Aerospace Studies, Price School of Public Policy</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2867548,34.0212394</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+
+        <Folder><name>Cinematics Arts</name>
+            <Folder><name>CTAN</name> 
+                <Placemark><name>CTAN</name>
+                <description>Animation, Cinematics Arts</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2870357,34.0238235</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>CTWR</name> 
+                <Placemark><name>CTWR</name>
+                <description>Writing, Cinematics Arts</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2865474,34.023347</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+
+        <Folder><name>USC Marshall School of Business</name>
+            <Folder><name>FBE</name> 
+                <Placemark><name>FBE</name>
+                <description>Finance and Business Economics Department, USC Marshall School of Business</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2852181,34.0187765</coordinates></Point>
+                </Placemark>
+            </Folder>
+
+            <Folder><name>DSO</name> 
+                <Placemark><name>DSO</name>
+                <description>Department of Data Sciences and Operations, USC Marshall School of Business</description>
+                <styleUrl>#z1</styleUrl><Point><coordinates>-118.2857516,34.0187808</coordinates></Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+</Folder>
+
+<Folder><name>home</name>
+    <Placemark><name>HOME</name>    
+    <description>Mardi Grass Apartment</description>
+    <styleUrl>#z1</styleUrl><Point><coordinates>-118.2798222,34.0282496</coordinates></Point>
+    </Placemark>
+</Folder>
+
+<!-- POLYGON((-118.2852181 34.0187765,-118.2857516 34.0187808,-118.2900113 34.01990387,-118.2909157 34.0222688,-118.2798222 34.0282496,-118.2815546 34.0217325,-118.2832474 34.0194327,-118.2852181 34.0187765)) -->
+<!-- <Polygon><outerBoundaryIs><LinearRing><coordinates>-118.2852181,34.0187765 -118.2857516,34.0187808 -118.2900113,34.01990387 -118.2909157,34.0222688 -118.2798222,34.0282496 -118.2815546,34.0217325 -118.2832474,34.0194327 -118.2852181,34.0187765</coordinates></LinearRing></outerBoundaryIs></Polygon> -->
+
+
+<Folder><name>convex hull</name>
+    <Placemark><name>Convex Hull</name>
+    <Style>
+      <LineStyle>
+        <color>ff0000ff</color> <!-- set border color  -->
+        <width>3</width> <!-- set border width to 2 pixels  -->
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff0000</color> <!-- set fill color to red with 50% opacity -->
+      </PolyStyle>
+    </Style>
+    <Polygon>
+        <outerBoundaryIs>
+        <LinearRing>
+            <coordinates>
+            -118.2852181,34.0187765
+            -118.2857516,34.0187808
+            -118.2900113,34.01990387
+            -118.2909157,34.0222688
+            -118.2798222,34.0282496
+            -118.2815546,34.0217325
+            -118.2832474,34.0194327
+            -118.2852181,34.0187765
+            </coordinates>
+        </LinearRing>
+        </outerBoundaryIs>
+    </Polygon>
+    </Placemark>
+</Folder>
+
+<Folder><name>nearest neighbors</name>
+    <Style id="redLineStyle">
+        <LineStyle>
+        <color>ff0000ff</color>
+        <width>3</width>
+        </LineStyle>
+    </Style>
+    <Placemark><name>One</name><styleUrl>#redLineStyle</styleUrl>
+        <LineString><coordinates>-118.2815546,34.0217325 -118.2798222,34.0282496</coordinates></LineString>
+    </Placemark>
+    <Placemark><name>Two</name><styleUrl>#redLineStyle</styleUrl>
+        <LineString><coordinates>-118.2865474,34.023347 -118.2798222,34.0282496</coordinates></LineString>
+    </Placemark>
+    <Placemark><name>Three</name><styleUrl>#redLineStyle</styleUrl>
+        <LineString><coordinates>-118.2870357,34.0238235 -118.2798222,34.0282496</coordinates></LineString>
+    </Placemark>
+    <Placemark><name>Four</name><styleUrl>#redLineStyle</styleUrl>
+        <LineString><coordinates>-118.2864371,34.0221025 -118.2798222,34.0282496</coordinates></LineString>
+    </Placemark>
+</Folder>
+
+
+</Folder>
+</kml>
+

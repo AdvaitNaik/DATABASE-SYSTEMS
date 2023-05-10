@@ -1,0 +1,57 @@
+-- IF THE POSTGIS EXTENSION DOESN'T EXIST PLEASE UNCOMMENT BELOW QUERY
+
+-- create extension Postgis
+
+
+
+-- CREATE TABLE QUERY
+
+CREATE TABLE advait (
+    id serial primary key,
+    location text,
+    coordinate geometry(Point, 4326)
+);
+
+
+
+-- INSERT TABLE QUERY
+
+INSERT INTO advait (location, coordinate) VALUES
+('ALI', ST_GeomFromText('POINT(-118.2815546 34.0217325)', 4326)),
+('MATH', ST_GeomFromText('POINT(-118.2909157 34.0222688)', 4326)),
+('EE', ST_GeomFromText('POINT(-118.2900113 34.01990387)', 4326)),
+('PTE', ST_GeomFromText('POINT(-118.2891198 34.02009351)', 4326)),
+('ASCJ', ST_GeomFromText('POINT(-118.2869759 34.0210143)', 4326)),
+('PUBD', ST_GeomFromText('POINT(-118.2864371 34.0221025)', 4326)),
+('HMGT', ST_GeomFromText('POINT(-118.2832474 34.0194327)', 4326)),
+('AEST', ST_GeomFromText('POINT(-118.2867548 34.0212394)', 4326)),
+('CTAN', ST_GeomFromText('POINT(-118.2870357 34.0238235)', 4326)),
+('CTWR', ST_GeomFromText('POINT(-118.2865474 34.023347)', 4326)),
+('FBE', ST_GeomFromText('POINT(-118.2852181 34.0187765)', 4326)),
+('DSO', ST_GeomFromText('POINT(-118.2857516 34.0187808)', 4326)),
+('HOME', ST_GeomFromText('POINT(-118.2798222 34.0282496)', 4326));
+
+
+
+-- CONVEX HULL QUERY OUTPUT TEXT
+-- SELECT ST_AsText(ST_ConvexHull(ST_Collect(coordinate))) as ConvexHull
+-- FROM advait;
+
+
+
+-- CONVEX HULL QUERY OUTPUT KML
+
+SELECT ST_AsKML(ST_ConvexHull(ST_Collect(coordinate))) as ConvexHull
+FROM advait;
+
+
+
+-- NEAREST NEIGHBOR QUERY OUTPUT KML
+
+SELECT ST_AsKML(ST_MakeLine(t1.coordinate, t2.coordinate)) as FourNearestNeighbors
+FROM advait t1, 
+  (SELECT coordinate FROM advait 
+   WHERE location = 'HOME') t2
+WHERE t1.location != 'HOME'
+ORDER BY ST_Distance(t1.coordinate, t2.coordinate)
+LIMIT 4;

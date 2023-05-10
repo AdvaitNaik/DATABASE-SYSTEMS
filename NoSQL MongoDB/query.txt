@@ -1,0 +1,44 @@
+-----Q1. 
+{popularity: {$gte: 50}}
+
+-----Q3. 
+{
+  loc: {
+    $geoWithin: {
+      $box: [
+        [-118.291, 34.021], // lower-left location
+        [-118.283, 34.024] // upper-right location
+      ]
+    }
+  }
+}
+
+-----Q5.
+{
+ coordinates: {
+    $geoWithin: {
+      $geometry: {
+        type: "Polygon",
+        coordinates: [[
+          [-118.285, 34.021],
+          [-118.286, 34.019],
+          [-118.284, 34.019]
+        ]]
+      }
+    }
+  }
+}
+
+
+-----Q6.
+{
+  geometry: {
+    $geoWithin: {
+      $box: [
+        [-165, 18],
+        [-105, 69]
+      ]
+    }
+  }
+}
+
